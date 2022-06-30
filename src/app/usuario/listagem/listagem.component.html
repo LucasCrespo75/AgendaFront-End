@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      AGENDA
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/usuario/cadastro">Cadastro</a>
+          <li class="nav-item">
+            <a routerLink="/usuario" class="nav-link">Logout</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="col">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Email</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Telefone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuario">
+          <td scope="row">{{usuario.email}}</td>
+          <td>{{usuario.nome}}</td>
+          <td>{{usuaio.telefone}}</td>
+
+          <td>
+            <button type="button" class="btn btn-primary rounded-circle" (click)="onDeletar(usuario)">
+              <i class="fas fa-trash" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn btn-primary rounded-circle" (click)="onEditar(usuario)">
+              <i class="fas fa-edit" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

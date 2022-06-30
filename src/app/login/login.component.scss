@@ -1,0 +1,16 @@
+body{
+display: flex;
+justify-content:center ;
+background-color: bisque;
+}
+
+@media screen and (min-width: 769) {
+
+  .navbar-toggle{
+    display: block;
+    justify-content: space-between;
+  }
+  
+}
+
+  
